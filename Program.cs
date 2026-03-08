@@ -1,4 +1,4 @@
-﻿static void TelaPrincipal()
+﻿static void exibirLogo()
 {
     Console.Clear();
 Console.WriteLine(@"
@@ -12,12 +12,11 @@ GitHub: https://github.com/NC-JMonteiro/about_me
 Version: 1.0");
 
 Console.WriteLine("\nBoas vindas ao Screen Sound!\n");
-
-menuOpcoes();
 }
 
 static void menuOpcoes()
 {
+    exibirLogo();
     Console.WriteLine("Menu de opções:\n");
     Console.WriteLine(@"Digite 1 para resgistrar uma banda
 Digite 2 para mostrar todas as bandas
@@ -58,6 +57,6 @@ static void RegistroBanda()
     string banda = Console.ReadLine()!;
     Console.WriteLine($"A banda {banda} foi registrada com sucesso!");
     Thread.Sleep(1500);
-    TelaPrincipal();
+    menuOpcoes();
 }
-TelaPrincipal();
+menuOpcoes();
