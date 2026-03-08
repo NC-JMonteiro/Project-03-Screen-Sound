@@ -1,0 +1,14 @@
+/home/d3m0n/Public/GitHub/Learning_C#/Project-03-Screen-Sound/bin/Debug/net10.0/Project-03-Screen-Sound
+/home/d3m0n/Public/GitHub/Learning_C#/Project-03-Screen-Sound/bin/Debug/net10.0/Project-03-Screen-Sound.deps.json
+/home/d3m0n/Public/GitHub/Learning_C#/Project-03-Screen-Sound/bin/Debug/net10.0/Project-03-Screen-Sound.runtimeconfig.json
+/home/d3m0n/Public/GitHub/Learning_C#/Project-03-Screen-Sound/bin/Debug/net10.0/Project-03-Screen-Sound.dll
+/home/d3m0n/Public/GitHub/Learning_C#/Project-03-Screen-Sound/bin/Debug/net10.0/Project-03-Screen-Sound.pdb
+/home/d3m0n/Public/GitHub/Learning_C#/Project-03-Screen-Sound/obj/Debug/net10.0/Project-03-Screen-Sound.GeneratedMSBuildEditorConfig.editorconfig
+/home/d3m0n/Public/GitHub/Learning_C#/Project-03-Screen-Sound/obj/Debug/net10.0/Project-03-Screen-Sound.AssemblyInfoInputs.cache
+/home/d3m0n/Public/GitHub/Learning_C#/Project-03-Screen-Sound/obj/Debug/net10.0/Project-03-Screen-Sound.AssemblyInfo.cs
+/home/d3m0n/Public/GitHub/Learning_C#/Project-03-Screen-Sound/obj/Debug/net10.0/Project-03-Screen-Sound.csproj.CoreCompileInputs.cache
+/home/d3m0n/Public/GitHub/Learning_C#/Project-03-Screen-Sound/obj/Debug/net10.0/Project-03-Screen-Sound.dll
+/home/d3m0n/Public/GitHub/Learning_C#/Project-03-Screen-Sound/obj/Debug/net10.0/refint/Project-03-Screen-Sound.dll
+/home/d3m0n/Public/GitHub/Learning_C#/Project-03-Screen-Sound/obj/Debug/net10.0/Project-03-Screen-Sound.pdb
+/home/d3m0n/Public/GitHub/Learning_C#/Project-03-Screen-Sound/obj/Debug/net10.0/Project-03-Screen-Sound.genruntimeconfig.cache
+/home/d3m0n/Public/GitHub/Learning_C#/Project-03-Screen-Sound/obj/Debug/net10.0/ref/Project-03-Screen-Sound.dll
