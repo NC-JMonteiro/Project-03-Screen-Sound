@@ -12,3 +12,4 @@
 /home/d3m0n/Public/GitHub/Learning_C#/Project-03-Screen-Sound/obj/Debug/net10.0/Project-03-Screen-Sound.pdb
 /home/d3m0n/Public/GitHub/Learning_C#/Project-03-Screen-Sound/obj/Debug/net10.0/Project-03-Screen-Sound.genruntimeconfig.cache
 /home/d3m0n/Public/GitHub/Learning_C#/Project-03-Screen-Sound/obj/Debug/net10.0/ref/Project-03-Screen-Sound.dll
+/home/d3m0n/Public/GitHub/Learning_C#/Project-03-Screen-Sound/obj/Debug/net10.0/Project-03-Screen-Sound.sourcelink.json

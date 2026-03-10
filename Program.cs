@@ -32,6 +32,14 @@ Version: 1.0");
     Console.WriteLine("\nObrigado por usar nossos aplicativos!");
 }
 
+void ExibirTitulos(string titulo)
+{
+    int qntdLetras = titulo.Length;
+    string asteristicos = string.Empty.PadLeft(qntdLetras, '*');
+    Console.WriteLine(asteristicos);
+    Console.WriteLine(titulo);
+    Console.WriteLine(asteristicos + "\n");
+}
 // Função responsavel por exibição da lista de opções e chamar a função 'listOpcoes'
 void menuOpcoes()
 {
@@ -49,7 +57,7 @@ Digite 0 para sair");
 // Função responsavel pela lógica das opções usando o swich
 void listOpcoes()
 {
-    Console.Write("\nPor favor, digite uma das opções para continuar: ");
+    Console.Write("\nPor favor, d1igite uma das opções para continuar: ");
     int opcaoEscolhida = Convert.ToInt32(Console.ReadLine());
 
     switch (opcaoEscolhida)
@@ -61,10 +69,10 @@ void listOpcoes()
             listarBandas();
             break;
         case 3:
-            Console.WriteLine($"Você digitou {opcaoEscolhida}");
+            avaliarBanda();
             break;
         case 4:
-            Console.WriteLine($"Você digitou {opcaoEscolhida}");
+            mediaDasBanda();
             break;
         case 0:
             exibirLogoSaida();
@@ -75,17 +83,21 @@ void listOpcoes()
     }
 }
 
-// Lista de armazenamento do nome das bandas
-List<string> listaDasBandas = new List<string>();
+// Dicionario de armazenamento do nome das bandas
+Dictionary<string, List<int>> bandasRegistradas = new Dictionary<string, List<int>>();
+// Bandas adicionada ao dicionario para exemplo
+bandasRegistradas.Add("LinkinPark", new List<int> {10,5,6,3,4});
+bandasRegistradas.Add("Slipknot", new List<int> {10,9,6,7,5});
 
 // Função responsavel por registar o nome das bandas e adicionar na lista de armazenamento
 void RegistroBanda()
 {
     Console.Clear();
-    Console.WriteLine("Registro de bandas");
+    ExibirTitulos("REGISTRO DE BANDAS");
     Console.Write("Insira o nome da banda a ser registrada: ");
     string nomeBanda = Console.ReadLine()!;
-    listaDasBandas.Add(nomeBanda); // Curiosidade se a função for declarada como 'static', você não cnsegue acessar a lista de for da função. Funções locais static não podem capturar variáveis do escopo externo (como listaDasBandas) nem usar this.
+    //listaDasBandas.Add(nomeBanda); // Curiosidade se a função for declarada como 'static', você não cnsegue acessar a lista de for da função. Funções locais static não podem capturar variáveis do escopo externo (como listaDasBandas) nem usar this.
+    bandasRegistradas.Add(nomeBanda, new List<int>());
     Console.WriteLine($"A banda {nomeBanda} foi registrada com sucesso!");
     Thread.Sleep(1500);
     menuOpcoes();
@@ -95,8 +107,8 @@ void RegistroBanda()
 void listarBandas()
 {
     Console.Clear();
-    Console.WriteLine("Lista de bandas registradas:\n");
-    foreach (var banda in listaDasBandas)
+    ExibirTitulos("LISTA DE BANDAS REGISTRADAS");
+    foreach (var banda in bandasRegistradas.Keys)
     {
         Console.WriteLine(banda);
     }
@@ -116,5 +128,40 @@ void listarBandas()
     }
 }
 
+// Função responsavel pela avaliação das bandas
+void avaliarBanda()
+{
+    Console.Clear();
+    ExibirTitulos("AVALIAR BANDA");
+    Console.Write("Digite a banda que você quer avaliar: ");
+    string nomeBanda = Console.ReadLine()!;
+    if (bandasRegistradas.ContainsKey(nomeBanda))
+    {
+        Console.Write($"Qual a nota que a {nomeBanda} merece: ");
+        int nota = int.Parse(Console.ReadLine()!);
+        Console.WriteLine($"\n A nota {nota} foi registrada com sucesse a banda {nomeBanda}!");
+        Thread.Sleep(4000);
+        Console.Clear();
+        menuOpcoes();
+    } else
+    {
+        Console.WriteLine($"A banda {nomeBanda} não foi encontrada!");
+        Console.Write("Digite uma tecla para voltar ao menu principal");
+        Console.ReadKey();
+        Console.Clear();
+        menuOpcoes();
+    }
+}
+
+// Função responsavel pela exibição da média de avaliação de cada banda
+void mediaDasBanda()
+{
+    Console.Clear();
+    ExibirTitulos("MÉDIA DE AVALIAÇÃO DAS BANDAS");
+    Console.Write("Por favor, digite o nome da banda que você deseja ver a média: ");
+    string banda = Console.ReadLine()!;
+    double mediaBanda = bandasRegistradas[banda].Average();
+    Console.WriteLine($"A média atual da banda {banda} é: {mediaBanda}");
+}
 
 menuOpcoes();
